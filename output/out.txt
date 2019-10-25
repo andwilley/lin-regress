@@ -1,0 +1,13 @@
+CS-5001: HW#1
+Programmer: Drew Willey
+
+TRAINING:
+Using Learning rate eta = 4.0e-6
+Using 20000 iterations.
+
+OUTPUT:
+w0 = 48.926025
+w1 = 10.984646
+
+VALIDATION:
+Sum-of-Squares Error = 8.341779
