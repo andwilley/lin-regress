@@ -1,6 +1,6 @@
 module Main where
 
-import Learner1
+import qualified Learner1                      as L
 
 main :: IO ()
-main = runlearner
+main = L.main

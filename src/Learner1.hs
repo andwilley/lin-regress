@@ -1,9 +1,10 @@
 module Learner1
-    ( runlearner
+    ( main
     )
 where
 
 import           LearnerUtils
+import           System.Environment             ( getArgs )
 -----------------------------
 -- Gradient Descent
 -----------------------------
@@ -78,18 +79,20 @@ sumOfSquares (prediction : predictions) ((xs, y) : examples) =
 -- Entry Point
 -----------------------------
 
-runlearner :: IO ()
-runlearner = do
+main :: IO ()
+main = do
+    a <- getArgs
+    let [train, test, output] = a
     -- init parameters
-    let eta  = 0.000004
-    let reps = 20000
+    let eta                   = 0.000004
+    let reps                  = 20000
     -- parse data
-    trainingData <- readDataFromFile "data/chocodata.txt"
-    testingData  <- readDataFromFile "data/chocovalid.txt"
+    trainingData <- readDataFromFile train
+    testingData  <- readDataFromFile test
     -- train weights
     wts          <-
         getRandomWeights (0, 100) $ length <$> (fst <$> maybeHead trainingData)
     let learnedWts = gradientDescent eta reps wts trainingData
     -- check against test data
     let ssqerr     = sumOfSquares (predict learnedWts testingData) testingData
-    printOutput eta reps learnedWts ssqerr "output/out.txt"
+    printOutput eta reps learnedWts ssqerr output
