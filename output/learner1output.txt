@@ -6,8 +6,8 @@ Using Learning rate eta = 4.0e-6
 Using 20000 iterations.
 
 OUTPUT:
-w0 = 47.585556
-w1 = 10.995526
+w0 = 47.03285
+w1 = 11.0000105
 
 VALIDATION:
-Sum-of-Squares Error = 0.74790883
+Sum-of-Squares Error = 1.1572075e-2
