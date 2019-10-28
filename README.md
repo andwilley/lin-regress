@@ -23,3 +23,9 @@ $ stack exec learner1-exe data/chocodata.txt data/chocovalid.txt output/out.txt
 $ ghc -main-is Learner1 Learner1.hs -o learner1
 $ ./leaner1 PATH/TO/chocodata.txt PATH/TO/chocovalid.txt PATH/TO/out.txt
 ```
+
+## Deliverables
+
+- Source code is in the `src/` directory (Learner1.hs and Learner1Utils.hs)
+- The capture of the best output is in the `output/` directory (learner1output.txt)
+- input data is in the `data/` directory, named as provided
